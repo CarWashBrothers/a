@@ -1,0 +1,274 @@
+<html><head><base href="https://www.carwashbrothers.com/">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Car Wash Brothers - Servicio de Lavado Profesional</title>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+    @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css');
+
+    body {
+        font-family: 'Roboto', sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f0f5ff;
+        color: #333;
+    }
+    header {
+        background-color: #1e3799;
+        color: white;
+        padding: 20px 0;
+        text-align: center;
+    }
+    h1 {
+        margin: 0;
+        font-size: 2.8em;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+    }
+    .subtitle {
+        font-size: 1.2em;
+        margin-top: 10px;
+        font-weight: 300;
+    }
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 20px;
+    }
+    .logo {
+        width: 100px;
+        height: 100px;
+        margin-bottom: 15px;
+    }
+    .services {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        margin-top: 40px;
+    }
+    .service-card {
+        background-color: white;
+        border-radius: 15px;
+        padding: 25px;
+        margin: 15px;
+        width: 280px;
+        text-align: center;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .service-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+    }
+    .service-card h3 {
+        color: #1e3799;
+        font-size: 1.5em;
+        margin-bottom: 15px;
+    }
+    .service-card .price {
+        font-size: 1.3em;
+        font-weight: bold;
+        color: #4a69bd;
+        margin: 10px 0;
+    }
+    .service-card .description {
+        font-size: 0.9em;
+        color: #666;
+        margin-bottom: 15px;
+    }
+    .cta-button {
+        display: inline-block;
+        background-color: #4a69bd;
+        color: white;
+        padding: 12px 25px;
+        text-decoration: none;
+        border-radius: 50px;
+        margin-top: 20px;
+        transition: background-color 0.3s ease, transform 0.2s ease;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
+    .cta-button:hover {
+        background-color: #1e3799;
+        transform: scale(1.05);
+    }
+    footer {
+        background-color: #1e3799;
+        color: white;
+        text-align: center;
+        padding: 20px 0;
+        margin-top: 40px;
+    }
+    .water-animation {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+        z-index: -1;
+    }
+    .water-drop {
+        position: absolute;
+        background-color: rgba(74, 105, 189, 0.2);
+        border-radius: 50%;
+        animation: fall linear infinite;
+    }
+    @keyframes fall {
+        to {
+            transform: translateY(100vh);
+        }
+    }
+    .social-icons {
+        margin-top: 20px;
+    }
+    .social-icons a {
+        color: white;
+        font-size: 24px;
+        margin: 0 10px;
+        transition: color 0.3s ease;
+    }
+    .social-icons a:hover {
+        color: #4a69bd;
+    }
+    .whatsapp-button {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        background-color: #25D366;
+        color: white;
+        border-radius: 50%;
+        width: 60px;
+        height: 60px;
+        text-align: center;
+        font-size: 30px;
+        box-shadow: 2px 2px 3px #999;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
+        transition: background-color 0.3s ease;
+    }
+    .whatsapp-button:hover {
+        background-color: #128C7E;
+    }
+    .map-container {
+        margin-top: 40px;
+        text-align: center;
+    }
+    .map-container h2 {
+        margin-bottom: 20px;
+        color: #1e3799;
+    }
+    .map-frame {
+        width: 100%;
+        height: 450px;
+        border: none;
+        border-radius: 15px;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+</style>
+</head>
+<body>
+    <div class="water-animation" id="waterAnimation"></div>
+
+    <header>
+        <svg class="logo" viewBox="0 0 100 100">
+            <circle cx="50" cy="50" r="45" fill="#4a69bd"/>
+            <path d="M30,50 Q50,30 70,50 Q50,70 30,50" fill="none" stroke="white" stroke-width="5"/>
+            <circle cx="50" cy="50" r="5" fill="white"/>
+        </svg>
+        <h1>Car Wash Brothers</h1>
+        <p class="subtitle">Servicio de Lavado Profesional</p>
+    </header>
+
+    <div class="container">
+        <h2>Nuestros Servicios de Lavado</h2>
+        <div class="services">
+            <div class="service-card">
+                <h3>LIMPIEZA DE CAJUELA</h3>
+                <p class="price">MXN 30.00</p>
+                <p class="description">Aspirado, aroma y limpieza profunda de tu cajuela</p>
+                <a href="https://wa.me/p/7789984837753818/5218443550521" class="cta-button" target="_blank">Reservar</a>
+            </div>
+            <div class="service-card">
+                <h3>AUTOMÓVIL</h3>
+                <p class="price">MXN 100.00</p>
+                <p class="description">Lavado de exterior, aspirado, abrillantado completo</p>
+                <a href="https://wa.me/p/8160639287301529/5218443550521" class="cta-button" target="_blank">Reservar</a>
+            </div>
+            <div class="service-card">
+                <h3>CAMIONETA SUV</h3>
+                <p class="price">MXN 120.00</p>
+                <p class="description">Lavado de exterior, aspirado, abrillantado para SUVs</p>
+                <a href="https://wa.me/p/8845558378804596/5218443550521" class="cta-button" target="_blank">Reservar</a>
+            </div>
+            <div class="service-card">
+                <h3>TAXIS</h3>
+                <p class="price">MXN 80.00</p>
+                <p class="description">Lavado de exterior, aspirado, abrillantado para taxis</p>
+                <a href="https://wa.me/p/26230579406556067/5218443550521" class="cta-button" target="_blank">Reservar</a>
+            </div>
+            <div class="service-card">
+                <h3>CAMIONETA PICK UP</h3>
+                <p class="price">MXN 150.00</p>
+                <p class="description">Lavado de exterior, aspirado, abrillantado para pick ups</p>
+                <a href="https://wa.me/p/8254727187872313/5218443550521" class="cta-button" target="_blank">Reservar</a>
+            </div>
+        </div>
+
+        <div class="map-container">
+            <h2>Encuéntranos aquí</h2>
+            <iframe class="map-frame" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3607.379050434974!2d-101.03238028528561!3d25.414657183797066!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8688737bae513a63%3A0xc0393ae11af8a8e9!2sCar%20Wash%20Brothers!5e0!3m2!1sen!2sus!4v1691707666188!5m2!1sen!2sus" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2023 Car Wash Brothers. Todos los derechos reservados.</p>
+        <div class="social-icons">
+            <a href="https://www.tiktok.com/@car_wash_brothers?_t=8pISkt9Ejll&_r=1" target="_blank"><i class="fab fa-tiktok"></i></a>
+            <a href="https://www.instagram.com/car_wash_brother?igsh=MTRhNDFkdWh0MmFnMQ==" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.facebook.com/share/G5KsbMq1Ki2nvows/?mibextid=LQQJ4d" target="_blank"><i class="fab fa-facebook-f"></i></a>
+        </div>
+    </footer>
+
+    <a href="https://wa.me/528443550521" class="whatsapp-button" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <script>
+    document.addEventListener('DOMContentLoaded', (event) => {
+        const serviceCards = document.querySelectorAll('.service-card');
+        serviceCards.forEach(card => {
+            card.addEventListener('mouseover', () => {
+                card.style.backgroundColor = '#f0f8ff';
+            });
+            card.addEventListener('mouseout', () => {
+                card.style.backgroundColor = 'white';
+            });
+        });
+
+        // Water drop animation
+        const waterAnimation = document.getElementById('waterAnimation');
+        
+        function createWaterDrop() {
+            const drop = document.createElement('div');
+            drop.classList.add('water-drop');
+            drop.style.left = `${Math.random() * 100}%`;
+            drop.style.width = `${Math.random() * 10 + 5}px`;
+            drop.style.height = drop.style.width;
+            drop.style.animationDuration = `${Math.random() * 2 + 1}s`;
+            waterAnimation.appendChild(drop);
+
+            drop.addEventListener('animationend', () => {
+                drop.remove();
+            });
+        }
+
+        setInterval(createWaterDrop, 100);
+    });
+    </script>
+</body>
+</html>
